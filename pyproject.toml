@@ -52,8 +52,9 @@ prod = [
     "cadquery @ git+https://github.com/CadQuery/cadquery@master",
 ]
 
-[project.scripts]
-jcv = "jupyter_cadquery.scripts:main"
+[tool.hatch.build.targets.wheel.shared-data]
+"jcv" = "jcv"
+"jcv.cmd" = "jcv.cmd"
 
 [tool.hatch.metadata]
 allow-direct-references = true
